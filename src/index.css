@@ -1,0 +1,31 @@
+:root {
+  --main-text: #fff;
+  --card-bg: #23243a;
+  --chip-bg: #2e2e4d;
+  --chip-text: #e0e0e0;
+  --accent: #2ecc71;
+  --accent-hover: #27ae60;
+  --bg: #181926;
+}
+body {
+  background: var(--bg);
+  color: var(--main-text);
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  transition: background 0.3s, color 0.3s;
+}
+
+[data-theme='light'] {
+  --main-text: #23243a;
+  --card-bg: #fff;
+  --chip-bg: #e0e0e0;
+  --chip-text: #23243a;
+  --accent: #2ecc71;
+  --accent-hover: #27ae60;
+  --bg: #f6f7fa;
+}
+
+button, select {
+  outline: none;
+}

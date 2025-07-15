@@ -1,0 +1,57 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 32px;
+  padding: 32px 0;
+}
+
+.empty {
+  text-align: center;
+  color: #888;
+  font-size: 1.2rem;
+  margin-top: 48px;
+}
+
+.sortPanel {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 24px;
+  gap: 8px;
+}
+.sortSelect {
+  margin-left: 8px;
+  padding: 7px 32px 7px 10px;
+  border-radius: 8px;
+  border: 1.5px solid var(--select-border, #23243a);
+  background-color: var(--card-bg, #23243a);
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23b3b3d1" height="16" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 18px 18px;
+  color: var(--main-text, #fff);
+  font-size: 1rem;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(30,30,60,0.10);
+  outline: none;
+  transition: box-shadow 0.2s, background 0.2s, border 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+.sortSelect::-ms-expand {
+  display: none;
+}
+body[data-theme='light'] .sortSelect {
+  --select-border: #e0e0e0;
+  background-color: #f7f8fa;
+  background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="16" viewBox="0 0 20 20" width="16" xmlns="http://www.w3.org/2000/svg"><path d="M7.293 7.293a1 1 0 011.414 0L10 8.586l1.293-1.293a1 1 0 111.414 1.414l-2 2a1 1 0 01-1.414 0l-2-2a1 1 0 010-1.414z"/></svg>');
+  color: #23243a;
+  border: 1.5px solid #e0e0e0;
+}
+.sortSelect:focus {
+  box-shadow: 0 2px 8px #3a3d5c44;
+  background: #28284a;
+} 
