@@ -74,4 +74,40 @@ body[data-theme='light'] .card {
 }
 .delete:hover {
   color: #ff3333;
+}
+@media (max-width: 700px) {
+  .card {
+    padding: 16px 12px 12px 12px;
+    font-size: 0.98rem;
+  }
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+  .title {
+    font-size: 1.05rem;
+  }
+  .desc {
+    font-size: 0.97rem;
+  }
+  .tags {
+    gap: 5px;
+  }
+}
+@media (max-width: 420px) {
+  .card {
+    padding: 10px 6px 8px 6px;
+    border-radius: 12px;
+  }
+  .title {
+    font-size: 0.98rem;
+  }
+  .desc {
+    font-size: 0.93rem;
+  }
+  .chip {
+    font-size: 0.85rem;
+    padding: 2px 7px;
+  }
 } 

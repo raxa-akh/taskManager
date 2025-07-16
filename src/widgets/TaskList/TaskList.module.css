@@ -3,6 +3,8 @@
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 32px;
   padding: 32px 0;
+  width: 100%;
+  align-self: stretch;
 }
 
 .empty {
@@ -54,4 +56,30 @@ body[data-theme='light'] .sortSelect {
 .sortSelect:focus {
   box-shadow: 0 2px 8px #3a3d5c44;
   background: #28284a;
+}
+@media (max-width: 700px) {
+  .grid {
+    gap: 14px;
+    padding: 18px 12px;
+  }
+  .sortPanel {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 16px;
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+}
+@media (max-width: 420px) {
+  .sortPanel {
+    gap: 6px;
+    margin-bottom: 10px;
+    padding-left: 6px;
+    padding-right: 6px;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    padding: 8px 4px;
+  }
 } 
