@@ -5,7 +5,6 @@ import styles from './TaskList.module.css';
 import { useState } from 'react';
 import type { Task, TaskPriority } from '@/entities/task/model/types';
 import Select from 'react-select';
-import type { TaskCategory, TaskStatus } from '@/entities/task/model/types';
 
 const sortOptions = [
   { value: 'newest', label: 'Сначала новые' },
