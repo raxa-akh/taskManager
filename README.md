@@ -60,4 +60,5 @@ http://localhost:5173
 - **Fake API** - имитация серверного API с localStorage
 - **Async Thunks** - асинхронные действия Redux
 - **Component Composition** - композиция компонентов
-
+### Деплой:
+https://task-manager-59nw-4mzq0ti9v-raxas-projects.vercel.app
