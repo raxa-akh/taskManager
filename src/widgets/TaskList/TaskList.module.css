@@ -83,3 +83,80 @@ body[data-theme='light'] .sortSelect {
     padding: 8px 4px;
   }
 } 
+
+/* Стили для DatePicker */
+:global(.react-datepicker-wrapper) {
+  display: inline-block;
+}
+
+:global(.react-datepicker) {
+  background: var(--card-bg, #23243a) !important;
+  border: 1px solid var(--card-border, #23243a) !important;
+  border-radius: 8px !important;
+  color: var(--main-text, #fff) !important;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif !important;
+}
+
+:global(.react-datepicker__header) {
+  background: var(--card-bg, #23243a) !important;
+  border-bottom: 1px solid var(--card-border, #23243a) !important;
+  color: var(--main-text, #fff) !important;
+}
+
+:global(.react-datepicker__current-month) {
+  color: var(--main-text, #fff) !important;
+}
+
+:global(.react-datepicker__day-name) {
+  color: var(--main-text, #fff) !important;
+}
+
+:global(.react-datepicker__day) {
+  color: var(--main-text, #fff) !important;
+  background: transparent !important;
+}
+
+:global(.react-datepicker__day:hover) {
+  background: var(--chip-bg, #2e2e4d) !important;
+}
+
+:global(.react-datepicker__day--selected) {
+  background: var(--primary-color, #2ecc71) !important;
+  color: #fff !important;
+}
+
+:global(.react-datepicker__day--keyboard-selected) {
+  background: var(--primary-color, #2ecc71) !important;
+  color: #fff !important;
+}
+
+:global(.react-datepicker__navigation) {
+  color: var(--main-text, #fff) !important;
+}
+
+:global(.react-datepicker__navigation:hover) {
+  background: var(--chip-bg, #2e2e4d) !important;
+}
+
+:global(.react-datepicker__month-container) {
+  background: var(--card-bg, #23243a) !important;
+}
+
+/* Светлая тема */
+body[data-theme='light'] :global(.react-datepicker) {
+  --card-bg: #fff;
+  --card-border: #e0e0e0;
+  --main-text: #23243a;
+  --chip-bg: #f7f8fa;
+  --primary-color: #2ecc71;
+}
+
+body[data-theme='light'] :global(.react-datepicker__day:hover) {
+  background: var(--chip-bg, #f7f8fa) !important;
+}
+
+body[data-theme='light'] :global(.react-datepicker__navigation:hover) {
+  background: var(--chip-bg, #f7f8fa) !important;
+} 

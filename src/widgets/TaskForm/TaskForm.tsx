@@ -22,12 +22,12 @@ const priorities: { value: TaskPriority; label: string }[] = [
 ];
 
 /**
- * Пропсы для TaskForm
+ * Пропсы для компонента TaskForm
  * @typedef {Object} TaskFormProps
- * @property {Partial<Task>} [initial] - начальные значения для редактирования
- * @property {(task: Omit<Task, 'id' | 'createdAt'>) => void} onSubmit - обработчик сохранения
- * @property {() => void} onCancel - обработчик отмены
- * @property {'create' | 'edit'} [mode] - режим формы
+ * @property {Partial<Task>} [initial] - Начальные значения для редактирования задачи
+ * @property {(task: Omit<Task, 'id' | 'createdAt'>) => void} onSubmit - Обработчик сохранения формы
+ * @property {() => void} onCancel - Обработчик отмены формы
+ * @property {'create' | 'edit'} [mode] - Режим работы формы (создание или редактирование)
  */
 interface TaskFormProps {
   initial?: Partial<Task>;
@@ -37,9 +37,13 @@ interface TaskFormProps {
 }
 
 /**
- * Универсальная форма для создания и редактирования задачи
+ * Универсальная форма для создания и редактирования задач
+ * Поддерживает валидацию полей, адаптивный дизайн и интеграцию с темой
+ * Автоматически подстраивается под режим создания или редактирования
+ * 
  * @component
- * @param {TaskFormProps} props
+ * @param {TaskFormProps} props - Пропсы компонента
+ * @returns {JSX.Element} Форма для работы с задачами
  */
 export function TaskForm({ initial = {}, onSubmit, onCancel, mode = 'create' }: TaskFormProps) {
   const [title, setTitle] = useState(initial.title || '');
